@@ -17,6 +17,7 @@ const viewsPath=path.join(__dirname, '../templates/views')
 const partialsPath= path.join(__dirname,'../templates/partials')
 
 const app= express()
+const port= process.env.PORT || 3000 // the first value is for heroku
 
 // set up handlesbar engine and views location
 app.set('views', viewsPath)
@@ -162,5 +163,5 @@ app.get('*',(req,resp)=>{
 
 // the listen method help start up the server. this method takes two argument, a required one which is the port number and an optional one which is a callback function. starting a server is aynchronous process
 
-app.listen(3000,()=> console.log('Server is up on port 3000'))
+app.listen(port,()=> console.log(`Server is up on port ${port}` ))
 
