@@ -20,9 +20,9 @@ weatherForm.addEventListener('submit',e=>{
             
             if (!data.error) {
 
-                const{location, weather, temperature,feelsLike,address}= data
+                const{location, weather, temperature,feelsLike,address,humidity}= data
 
-                message[0].innerHTML= '<div><h3>'+ location +'.</h3> <p >'+ weather +'.Temperature at '+ temperature +' but it feels like '+ feelsLike +'. '+ address +' </p></div>'
+                message[0].innerHTML= '<div><h3>'+ location +'.</h3> <p >'+ weather +'.Temperature at '+ temperature +' but it feels like '+ feelsLike +', the humidity is '+ humidity +' %. '+ address +' </p></div>'
                 
             }else{
 

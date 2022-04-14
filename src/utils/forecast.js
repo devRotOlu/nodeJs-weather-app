@@ -18,12 +18,13 @@ const forecast=(lat,long,callback)=>{
 
         }else{
             
-            const {weather_descriptions, temperature,feelslike}=body.current
+            const {weather_descriptions, temperature,feelslike,humidity}=body.current
 
             callback(undefined,{
                 weather:weather_descriptions[0],
                 temperature:`${temperature} degrees out`,
                 feelsLike:`${feelslike} degrees out`,
+                humidity
             })
          }
     })
